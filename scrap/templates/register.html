@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+            <link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="{%static 'box/css/style.css'%}" type="text/css">
+<div class="body-content">
+  <div class="module">
+    <form class="form" action="" method="post" enctype="multipart/form-data" autocomplete="off">
+        {%csrf_token%}
+        <h1>Create an account</h1>
+      <div class="alert alert-error"></div>
+      <input type="text" placeholder="User Name" name="username" required />
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Password" name="password1"  required />
+      <input type="password" placeholder="Confirm Password" name="password2"  required />
+      <input type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
+      <div class="text-center">
+        already have account? <a class="link" href="{% url 'signin' %}">Sign-Up</a>
+      </div>
+    </form>
+  </div>
+</div>
+           
+</body>
+
+</html>

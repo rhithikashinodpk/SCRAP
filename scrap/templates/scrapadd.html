@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- <link rel="stylesheet" href="{%static 'social/css/style.css'%}">  -->
+
+</head>
+<body class="body">
+    <form action=""  method="post" enctype="multipart/form-data">
+
+        {%csrf_token%}
+        <div id="loading-screen">
+            <img src="https://raw.githubusercontent.com/Mario-Duarte/CodePen/main/assets/loading-animation-base.svg" width="234" alt="base" class="base">
+            <img src="https://raw.githubusercontent.com/Mario-Duarte/CodePen/main/assets/loading-animation-wheel.svg" width="241.5" alt="wheel" class="wheel">
+            <div class="hamster">
+                <img src="https://raw.githubusercontent.com/Mario-Duarte/CodePen/main/assets/loading-animation-hamster.svg" width="150px" alt="Hamster body" class="hamster-body">
+                <img src="https://raw.githubusercontent.com/Mario-Duarte/CodePen/main/assets/loading-animation_leg3.svg" width="87px" alt="back legs" class="back-legs">
+                <img src="https://raw.githubusercontent.com/Mario-Duarte/CodePen/main/assets/loading-animation_leg1.svg" alt="leg 1" width="49px" class="leg-1">
+                <img src="https://raw.githubusercontent.com/Mario-Duarte/CodePen/main/assets/loading-animation_leg2.svg" alt="leg 2" width="34px" class="leg-2">
+            </div>
+            {{form.as_p}}
+            <img src="{{scrap.picture.url}}"
+            
+            
+        
+        <div class="content">
+            <p class="icons">
+                <span><a href="https://twitter.com/MDesignsuk" target="_blank"><i class="fa fa-twitter"></i></a></span>&nbsp;
+                <span><a href="https://github.com/Mario-Duarte/" target="_blank"><i class="fa fa-github"></i></a></span>&nbsp;
+                <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><i class="fa fa-bitbucket"></i></a></span>&nbsp;
+                <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><i class="fa fa-codepen"></i></a></span>
+            </p>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

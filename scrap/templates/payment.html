@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+
+    <form action="/process_payment" method="post">
+        <!-- Product details -->
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" value="Your Product" readonly>
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" value="100.00" readonly>
+
+        <!-- Customer information -->
+        <label for="customer_name">Name:</label>
+        <input type="text" id="customer_name" name="customer_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Payment information -->
+        <label for="card_number">Card Number:</label>
+        <input type="text" id="card_number" name="card_number" placeholder="1234 5678 9012 3456" required>
+
+        <label for="expiry_date">Expiry Date:</label>
+        <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+        <button type="submit">Submit Payment</button>
+    </form>
+</body>
+</html>
